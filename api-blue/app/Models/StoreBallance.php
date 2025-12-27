@@ -22,5 +22,10 @@ class StoreBallance extends Model
     // relation one store has one balances
     public function store(){
         return $this->belongsTo(Store::class);
-    } 
+    }
+    
+    // relation one store ballance has a lot storehistotryballance
+    public function storeBallanceHistory(){
+        return $this->hasMany(StoreBallanceHistory::class);
+    }
 }
