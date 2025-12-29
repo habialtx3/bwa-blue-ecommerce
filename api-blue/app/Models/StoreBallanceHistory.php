@@ -10,8 +10,7 @@ class StoreBallanceHistory extends Model
     //
     use UUID;
 
-    protected $fillable = [
-        'id',
+    protected $fillable = [ 
         'store_balance_id',
         'type',
         'reference_id',
