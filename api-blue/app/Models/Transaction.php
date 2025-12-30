@@ -14,8 +14,8 @@ class Transaction extends Model
         'code',
         'buyer_id',
         'store_id',
-        'address_id',
         'address',
+        'address_id',
         'city',
         'postal_code',
         'shipping',
@@ -39,5 +39,9 @@ class Transaction extends Model
 
     public function store(){
         return $this->belongsTo(Store::class);
+    }
+    
+    public function transactionDetails(){
+        return $this->hasMany(TransactionDetail::class);
     }
 }

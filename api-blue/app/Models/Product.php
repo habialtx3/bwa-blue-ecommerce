@@ -28,15 +28,23 @@ class Product extends Model
     ];
 
     // product - store relation
-    public function store(){
+    public function store()
+    {
         return $this->belongsTo(Store::class);
     }
 
-    public function productCategory(){
+    public function productCategory()
+    {
         return $this->belongsTo(ProductCategory::class);
     }
 
-    public function productImages(){
+    public function productImages()
+    {
         return $this->hasMany(ProductImage::class);
+    }
+
+    public function transactionDetails()
+    {
+        return $this->hasMany(TransactionDetail::class);
     }
 }
