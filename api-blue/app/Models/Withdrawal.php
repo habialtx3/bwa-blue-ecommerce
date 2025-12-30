@@ -19,6 +19,8 @@ class Withdrawal extends Model
         'status',
     ];
 
+    protected $casts = [];
+
     public function storeBallance(){
         return $this->belongsTo(StoreBallance::class);         
     }

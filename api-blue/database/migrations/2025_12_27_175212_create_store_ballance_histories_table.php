@@ -18,7 +18,7 @@ return new class extends Migration
             $table->enum('type',['income','withdraw']);
             $table->integer('reference_id');
             $table->string('reference_type');
-            $table->decimal('amount');
+            $table->decimal('amount',26,2);
             $table->string('remarks');
             $table->timestamps();
         });

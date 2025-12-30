@@ -19,6 +19,10 @@ class StoreBallanceHistory extends Model
         'remarks'
     ];
 
+    protected $casts = [
+        'amount'=>'decimal:2'
+    ];
+
     // relation one store ballance has one storehistotryballance
     public function storeBalance(){
         return $this->belongsTo(StoreBallance::class);

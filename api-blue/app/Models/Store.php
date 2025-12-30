@@ -31,4 +31,9 @@ class Store extends Model
     public function storeBallance(){
         return $this->hasOne(StoreBallance::class);
     }
+
+    // product - store relation
+    public function products(){
+        return $this->hasMany(Product::class);
+    }
 }
