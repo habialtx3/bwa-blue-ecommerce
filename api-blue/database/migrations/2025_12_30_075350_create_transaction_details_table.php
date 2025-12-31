@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('transaction_details', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->uuid('transaction_id');
-            $table->foreign('transaction_id')->references('id')->on('transations')->onDelete('cascade');
+            $table->foreign('transaction_id')->references('id')->on('transactions')->onDelete('cascade');
             $table->uuid('product_id');
             $table->integer('qty');
             $table->decimal('subtotal',26,2);
