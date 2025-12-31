@@ -44,4 +44,9 @@ class Transaction extends Model
     public function transactionDetails(){
         return $this->hasMany(TransactionDetail::class);
     }
+
+
+    public function productReviews(){
+        return $this->hasMany(ProductReview::class);
+    }
 }
