@@ -41,7 +41,4 @@ class Store extends Model
         return $this->hasMany(Transaction::class);
     }
 
-    public function transactionDetails(){
-        
-    }
 }

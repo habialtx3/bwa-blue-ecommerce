@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('withdrawals', function (Blueprint $table) {
-            $table->uuid('id');
+            $table->uuid('id')->primary();
             $table->uuid('store_ballance_id');
             $table->foreign('store_ballance_id')->references('id')->on('store_ballances')->onDelete('cascade');
             $table->decimal('amount',26,2);

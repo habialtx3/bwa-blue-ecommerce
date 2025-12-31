@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('product_categories', function (Blueprint $table) {
-            $table->uuid('id');
+            $table->uuid('id')->primary();
             $table->uuid('parent_id')->nullable();
             $table->foreign('parent_id')->references('id')->on('product_categories')->onDelete('cascade');
             $table->string('image')->nullable();
